@@ -37,6 +37,7 @@ A repo or zip containing:
 4. **`JUDGMENT.md`** — short answers (a few sentences each) to:
    - **a.** The page ran paid traffic for ~24 hours with a broken form. What do you tell Quillstack about the **leads and the ad spend** during that window — and what do you actually *do* about it?
    - **b.** Of the issues you found, which would you **fix yourself** and which would you **escalate to Flint engineering** — and why? (There's no single right answer; we want your reasoning on where the line is.)
+   - **c. (Bonus)** When you wire up and publish a HubSpot form, HubSpot can flag submissions coming from a domain it doesn't recognize as **spam** — and a spam-flagged submission never becomes a contact, so leads silently disappear *even though the form looks like it's working.* If Priya's live page were quietly losing real leads to the spam filter, how would you **catch it** and make sure her submissions stop getting classified as spam? Bonus points for actually reproducing it and showing the fix.
 5. A few of the **key prompts / your AI session**, so we can see how you drove your tools.
 
 If you advance, the final round is a **paid, hands-on build session** in Flint — you'll actually import a site, build pages, and wire integrations up live with us. The real work.
