@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quillstack Sentinel — Join the waitlist</title>
+  <meta name="description" content="Quillstack Sentinel catches breaking API changes before they ship. Join the launch waitlist." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">
+      <span class="logo-dot"></span>
+      <span class="brand-name">Quillstack</span>
+    </div>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#why">Why Sentinel</a>
+      <a href="#waitlist" class="nav-cta">Get early access</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Introducing Quillstack Sentinel</p>
+        <h1>Catch breaking API changes <em>before</em> they ship.</h1>
+        <p class="sub">
+          Sentinel watches every contract across your services and flags the change
+          that would have paged you at 2am — in the pull request, not in production.
+          Launching July 14. Get on the list.
+        </p>
+        <ul class="bullets">
+          <li>Contract diffing on every PR</li>
+          <li>Drift alerts before your customers find them</li>
+          <li>Zero-config for teams already on Quillstack</li>
+        </ul>
+      </div>
+
+      <div class="hero-form" id="waitlist">
+        <h2>Request early access</h2>
+        <p class="form-sub">We're onboarding design partners now. Tell us where to reach you.</p>
+
+        <!-- HubSpot form renders into this container -->
+        <div id="waitlist-form"></div>
+
+        <!-- Campaign attribution: pass the ad's utm_campaign through to the CRM -->
+        <input type="hidden" id="utmCampaign" name="utm_campaign" value="" />
+
+        <p class="form-fineprint">No spam. We'll only email you about Sentinel.</p>
+      </div>
+    </section>
+
+    <section class="logos">
+      <p>Trusted by platform teams at</p>
+      <div class="logo-row">
+        <span>Northwind</span><span>Cobalt</span><span>Temboo</span><span>Driftwave</span><span>Verith</span>
+      </div>
+    </section>
+
+    <section id="why" class="why">
+      <h2>The outage you didn't see coming usually starts with a contract change.</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Diff every contract</h3>
+          <p>Sentinel snapshots your API contracts and shows the breaking diff inline on the PR.</p>
+        </div>
+        <div class="card">
+          <h3>Alert before drift</h3>
+          <p>Catch the slow drift between what you publish and what your consumers expect.</p>
+        </div>
+        <div class="card">
+          <h3>Ship with confidence</h3>
+          <p>Green check before merge. No more "who changed the payload" archaeology.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-cta">
+      <h2>Be first on Sentinel.</h2>
+      <a href="#waitlist" class="btn">Get early access</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Quillstack, Inc. · <a href="/privacy">Privacy</a> · <a href="/security">Security</a></p>
+  </footer>
+
+  <!-- ===== HubSpot form embed ===== -->
+  <script charset="utf-8" src="//js.hsforms.net/form/embed/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      portalId: "4419921",
+      formId: "9a2c-quillstack-demo-req",
+      region: "na2",
+      target: "#waitlist-form",
+      onFormSubmitted: function () {
+        window.location.href = "/thank-you.html";
+      }
+    });
+  </script>
+
+  <!-- ===== Campaign attribution ===== -->
+  <script>
+    // Pull utm_campaign off the ad URL and stash it on the hidden field
+    // so it rides along with the form submission into HubSpot.
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var campaign = params.get("utm_campaign");
+      if (campaign) {
+        document.getElementById("utm_campaign").value = campaign;
+      }
+    })();
+  </script>
+</body>
+</html>
